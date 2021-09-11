@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Event DOM JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+            .merah{
+                background: red;
+            }
+
+            .black{
+                border: 2px solid black;
+            }
+        </style>
+
+    </head>
+    <body onload="alert('Sudah Seledai')">
+        <h1>Belajar DOM JavaScript</div>
+        <img onclick="berubah()" src="Untitled.png" width=300 id="gambar" class="black">
+        <input type="text" value="nama" id="input">
+        <input type="submit" id="submit">
+        Namanya adalah<span id="p1"> </span>
+        
+        <script>
+            var img = document.getElementById('gambar');
+            img.width = 400;
+
+            img.className +=' merah';
+
+            var input = document.getElementById('input');
+            input.value = "nama lengkap";
+
+            input.style.border = '3px solid blue';
+            input.style.backgroundColor = 'yellow';
+
+            //---------EVENT--------//
+            //cara1
+            function berubah(){
+                img.style.backgroundColor = 'yellow';
+            }
+
+            //cara2
+            input.onclick = berubah2;
+
+            function berubah2(){
+                input.style.backgroundColor = 'blue';
+            }
+
+            //cara3
+            input.addEventListener('mouseenter', berubah2)
+
+            input.addEventListener('mouseleave', function(){
+                input.style.backgroundColor = 'red';
+            });
+
+            var submit = document.getElementById('submit');
+            var span = document.getElementById('p1');
+
+            submit.onclick = function(){
+                var text = input.value;
+                span.innerHTML = text;
+            };
+
+        </script>
+    </body>
+</html>

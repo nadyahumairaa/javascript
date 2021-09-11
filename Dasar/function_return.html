@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Function Return Value</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+        
+        // function return value
+        function sayHello(firstName, lastName){
+            const say = `Hello ${firstName} ${lastName}`;
+            return say;
+        }
+
+        const result = sayHello("Nadya", "Humaira");
+        document.writeln(`<p>${result}</p>`);
+
+        // function return value lebih dari satu
+        function getFinalValue(value){
+            if(value > 90){
+                return "A";
+            } else if( value > 80){
+                return "B";
+            } else if(value > 70){
+                return "C";
+            } else if(calue > 60){
+                return "D";
+            } else{
+                return "E";
+            }
+        }
+
+        const finalValue = getFinalValue(95);
+        document.writeln(`<p>Selamat nilai Anda ${finalValue}</p>`);
+
+        // menghentikan return
+        function isContains(array, searchValue){
+            for (const element of array){
+                if(element === searchValue){
+                    return true;
+                }
+            }
+            return false;
+        }
+        
+        const array =[1,8,10,11,19,78,22];
+        const search = 33;
+        const found = isContains(array, search);
+        document.writeln(`<p>${found}</p>`);
+
+        </script>
+    </body>
+</html>

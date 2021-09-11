@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Date</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+        {
+            //membuat object date
+            const date1 = new Date();
+            console.info(date1);
+
+            const date2 = new Date(2020, 10, 10);
+            console.info(date2);
+
+            const date3 = new Date(2020, 10, 10, 14, 13, 51, 123);
+            console.info(date3);
+        }
+
+        {
+            //epoch dan unix timestamp
+            const timestamp = Date.now();
+            console.info(timestamp);
+
+            const dateUnix = new Date(timestamp);
+            console.info(dateUnix);
+
+            console.info(dateUnix.getTime());
+        }
+
+        {
+            //parsing date
+            const parseTimestamp = Date.parse("2020-12-18T10:10:10.123+07:00")
+            console.info(parseTimestamp);
+
+            const pasrseDate = new Date(parseTimestamp);
+            console.info(pasrseDate);
+        }
+
+        {
+            //date getter setter
+            const date = new Date();
+            date.setFullYear(2020);
+
+            console.info(date.getFullYear());
+            console.info(date.getMonth());
+            console.info(date.getDate());
+            console.info(date.getHours());
+            console.info(date.getMinutes());
+            console.info(date.getSeconds());
+            console.info(date.getMilliseconds());
+            console.info(date.getTimezoneOffset());
+        }
+        
+        </script>
+    </body>
+</html>

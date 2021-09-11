@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Array</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+        
+        //menambahkan data ke array pakai .push
+        //mendapatkan pajang array array.length
+        //mendapatkan data diposisi index array[index]
+        //mengubah data diposisi index array[index] = value
+        //menghapus data diposisi index namun index tidak bergeser delete array[index]
+
+        const names = [];
+        names.push("Nadya");
+        names.push("Humaira", "Huma");
+        console.table(names);
+
+        names [1] = "Yoga";
+        console.table(names);
+
+        names.push(1,2,3);
+        names.push(["Huma", "Ipul"]);
+        console.table(names);
+
+        </script>
+    </body>
+</html>

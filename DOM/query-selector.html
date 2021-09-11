@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DOM JavaScript</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1> Belajar DOM JavaScript</h1>
+
+        <div id="box1"></div>
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+        <div class="boxes"></div>
+        
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaSCript</li>
+            <div></div>
+        </ul>
+
+        <script>
+            document.getElementById('box1').innerHTML = "Nadya Humaira";
+
+            var boxes = document.getElementsByClassName('boxes');
+            boxes[0].innerHTML = "Versi Terbaru";
+            boxes[1].innerHTML = "Versi Sebelumnya";
+            boxes[2].innerHTML = "Versi Terlama";
+
+            var list = document.getElementsByTagName('li');
+            list[0].innerHTML = "PHP";
+            list[1].innerHTML = "SASS";
+            list[2].innerHTML = "JQuery";
+
+            //query selector
+            document.querySelectorAll('#box1')[0].innerHTML = "Huma";
+            document.querySelectorAll('.boxes')[0].innerHTML = "Huma";
+            document.querySelectorAll('ul div')[0].innerHTML = "Huma";
+        </script>
+    </body>
+</html>

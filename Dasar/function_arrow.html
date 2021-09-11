@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Function Arrow</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+        
+            //const sayHello = (name) => {
+            //    const say = `Hello ${name}`;
+            //    console.info(say);
+            //}
+            //sayHello("Huma");
+
+        // arrow function tanpa menggunakan blok {}
+        // const sayHello = (name) => console.info(`Hello ${name}`);
+        // arrow function tanpa kurung parameter
+        const sayHello = name => console.info(`Hello ${name}`);
+
+        sayHello("Huma");
+
+        // arrow function return
+        //const sum = (fisrt, second) => {
+        //    return first + second;
+        //}
+
+        const sum = (fisrt, second) => fisrt + second;
+        console.info(sum(100,100));
+
+        // arrow function sebagai parameter
+        function giveMeName(callback){
+            callback("Huma");
+        }
+
+        // Anonymous Function
+       // giveMeName(function (name)){
+       //     console.info(`Hello ${name}`);
+       // }
+
+        // dengan arrow function
+        giveMeName(name => console.info(`Hello ${name}`));
+
+        </script>
+    </body>
+</html>

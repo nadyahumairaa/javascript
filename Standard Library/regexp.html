@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reguler Expression</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+        //fitur mencari menggunakan pola
+        {
+            const regex1 = /[huma]/
+        const regex2 = new RegExp("[ali]")
+        const regex3 = new RegExp(/[ali]/)
+        }
+
+        {
+            //regex instance method
+            const name = "Nadya Ali Al Humaira";
+            const regex = /nadya/;
+
+            const result = regex.exec(name);
+            console.info(result);
+
+            const test = regex.test(name);
+            console.info(test);
+        }
+
+        {
+            //regex modifer
+            const name = "Nadya Ali\nAl\nHumaira";
+            const regex1 = /ali/g
+            const regex2 = /Humaira/ig
+
+            let result;
+            while ((result = regex1.exec(name)) !== null){
+                console.info(result);
+            }
+
+            while ((result = regex2.exec(name)) !== null){
+                console.info(result);
+            }
+        }
+        
+        </script>
+    </body>
+</html>

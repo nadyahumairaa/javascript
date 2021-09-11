@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Destructuring</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+        
+        {
+        const names = ["Nadya", "Ali", "Kurniawan", "Humaira"];
+        const [fisrtName, middleName, lastName, ...others] = names;
+
+        console.info(fisrtName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+
+        }
+
+        // mengambil data di object/ destructuring object
+        {
+            const person = {
+            fisrtName: "Nadya",
+            lastName: "Humaira",
+            address: {
+                street: "Jl. Raya Paledang",
+                city: "Sukabumi",
+                country: "Indonesia"
+            },
+            hobby: "Rebahan",
+            };
+
+            // destructuring nested object ada di (addres: {})
+            let {fisrtName, lastName, address: {street, city, country}, ...others} = person;
+            console.info(fisrtName);
+            console.info(lastName);
+            console.info(street);
+            console.info(city);
+            console.info(country);
+            console.info(others);
+
+        }
+
+
+        // distructuring function parameter
+        {
+            function displayPerson({fisrtName, middleName, lastName}){
+                console.info(fisrtName);
+                console.info(middleName);
+                console.info(lastName);
+            }
+            const person ={
+                fisrtName: "ALi",
+                middleName: "Kurniawan",
+                lastName: "Khannedy"
+            };
+
+            displayPerson(person);
+        }
+
+
+        // distructuring function array
+        {
+            function sum([fisrt, second]){
+                return fisrt + second;
+            }
+            console.info(sum([1,1]));
+            console.info(sum([10,10]));
+        }
+
+
+        // distructuring value default array
+        {
+            const names = ["Ali"];
+            const [fisrtName, middleName = "Kurniawan", lastName = "Khumaira"] = names;
+
+            console.info(fisrtName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+
+        // distructuring value default object
+        {
+            const person = {
+            fisrtName: "Nadya",
+            lastName: "Humaira"
+            };
+
+            // destructuring nested object ada di (addres: {})
+            let {fisrtName, middleName = "Ali", lastName} = person;
+            console.info(fisrtName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+
+        // distructuring dengan variable lain
+        {
+            const person = {
+            fisrtName: "Nadya",
+            middleName: "Ali",
+            lastName: "Humaira"
+            };
+
+            // destructuring nested object ada di (addres: {})
+            let {fisrtName: namaDepan, 
+                middleName: namaTengah, 
+                lastName: namaBelakang} = person;
+
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+        }
+
+        </script>
+    </body>
+</html>

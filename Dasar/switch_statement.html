@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Switch Statement</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+        
+        const nilai = "A";
+
+        switch (nilai){
+            case "A":
+                document.writeln("<p>Anda lulus dengan baik..ciee</p>");
+                break;
+            case "B":
+                document.writeln("<p>Anda lulus</p>");
+                break;
+            case "C":
+                document.writeln("<p>Alhamdulillah uyuhan haha</p>");
+                break;
+            case "D":
+                document.writeln("<p>Bodoh ahahhaha</p>");
+            default:
+                document.writeln("<p>Pindah jurusan dah ahahah</p>");
+        }
+
+        if(nilai === "A"){
+            document.writeln("<p>Anda lulus dengan baik..ciee</p>");
+        } else if(nilai === "B"|| nilai === "C"){
+            document.writeln("<p>Anda lulus</p>");
+
+        } else if(nilai === "D"){
+            document.writeln("<p>Bodoh ahahhaha</p>");
+        } else{
+            document.writeln("<p>Pindah jurusan dah ahahah</p>");
+        }
+
+        </script>
+    </body>
+</html>
